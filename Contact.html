@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Contact Us</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="Contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;900&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/6cd7c11d59.js" crossorigin="anonymous"></script>
+	<script>
+        function validateForm() {
+            var firstName = document.getElementById("first-name").value; 
+            var lastName = document.getElementById("last-name").value; 
+            var email = document.getElementById("email").value;
+            var subject = document.getElementById("subject").value;
+            var message = document.getElementById("message").value;
+
+            if (firstName === "" || lastName === "" || email === "" || subject === "" || message === "") {
+                alert("Please fill in all fields.");
+                return false; 
+            }
+            
+            success();
+            return true; 
+        }
+
+        function success() {
+            alert("Your form has been successfully submitted.\nYour query is important to us.\nPlease allow a few days for a reply.");
+        }      
+    </script>
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<div class="nav-logo">
+				<a href="Index.html"><img src="logo.png" alt="Logo"></a>
+			</div>
+			<ul>
+				<li class="dropdown">
+					<a href="About.html">About</a>
+					<ul class="dropdown-content">
+						<li><a href="Skills.html">Skills</a></li>
+						<li><a href="Gallery.html">Gallery</a></li>
+						<li><a href="Project.html">Project</a></li>
+						<li><a href="Culture.html">Culture</a></li>
+					</ul>
+				</li>
+				<li><a href="Design.html">Design</a></li>
+				<li><a href="Testimonial.html">Testimonial</a></li>
+				<li><a href="Contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="breadcrumb">
+        <a href="Index.html">Home</a>
+        <span> > </span>
+        <a href="Contact.html">Contact</a>
+    </div>
+
+	<div class="container">
+		<form name="myForm" onsubmit="return validateForm()" method="post">
+			<h2>GET IN TOUCH</h2>
+			<label for="name">First Name</label>
+			<input type="text" id="first-name" name="first-name" placeholder="Write your first name here." required>
+			<label for="name">Last Name</label>
+			<input type="text" id="last-name" name="last-name" placeholder="Write your last name here." required>
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email" placeholder="Write your email here." required>
+			<label for="subject">Subject</label>
+			<input type="text" id="subject" name="subject" placeholder="Write your subject here." required>
+			<label for="message">Message</label>
+			<textarea id="message" name="message" placeholder="Write your message." style="height:200px" required></textarea>
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+
+	<footer>
+		<div class="footer-content">
+			<p>&copy; Manish Thapa Magar</p>
+			<ul class="social-icons">
+				<li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+			</ul>
+		</div>
+	</footer>   
+	
+    
+</body>
+</html>
